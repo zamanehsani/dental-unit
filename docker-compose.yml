@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_dental
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: D2024d@24
+      POSTGRES_DB: dental
+    ports:
+      - "5436:5432"
+    volumes:
+      - dental_data:/var/lib/postgresql/data
+
+volumes:
+  dental_data:
